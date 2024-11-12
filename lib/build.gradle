@@ -1,0 +1,42 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'org.iol.App'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/']
+        }
+
+        resources {
+            srcDirs = ['resources/']
+        }
+    }
+
+    test {
+        java {
+            srcDirs = []
+        }
+
+        resources {
+            srcDirs = []
+        }
+    }
+}
